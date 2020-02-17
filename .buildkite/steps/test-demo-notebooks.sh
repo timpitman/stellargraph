@@ -36,8 +36,7 @@ case $(basename "$f") in
 esac
 
 echo "--- :python: installing papermill"
-# Pulling in https://github.com/nteract/papermill/pull/459 for --execution-timeout, which hasn't been released yet
-pip install https://github.com/nteract/papermill/archive/master.tar.gz
+pip install "papermill>=2.0.0"
 
 echo "--- installing dependencies"
 pip install -q --no-cache-dir '.[demos]'
